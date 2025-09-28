@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "types": ["jest"],
+    "lib": ["es2019", "dom"],
+    "esModuleInterop": true,
+  },
+  "include": ["src", "**/*.test.ts", "**/*.test.tsx"]
+}
