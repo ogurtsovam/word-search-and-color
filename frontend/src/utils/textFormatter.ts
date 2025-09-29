@@ -1,3 +1,5 @@
+import isLetter from "./isLetter";
+
 type Counter = {
   [key: string]: number;
 };
@@ -7,29 +9,38 @@ function textFormatter(data: string, rules: [string, string][]): string {
   rules.forEach(([, word]) => counter[word] = 0)
 
   const result: string[] = []
+  let currentWord: string = ''
 
-  // нужна не добавляем слово пока оно не целое, ждём " "
-  // нужно написать функцию Которая проверяет что символ - буква/цифра
+  // result.push(`<span style={{ color: ${key}}}>${word}</span>`)
 
   for(let i = 0; i < data.length; i += 1) {
-    rules.forEach(([key, word]) => {
-      if (counter[word] !== 0) {
-        if (data[i] === word[counter[word]]) {
+    if (isLetter(data[i])) {
+      rules.forEach(([key, word]) => {
+      
+        if (data[i] === word[0]) {
           counter[word] += 1
+        } else if (counter[word] !== 0) {
+          if (data[i] === word[counter[word]]) {
+            counter[word] += 1
+          }
+        } else {
+          counter[word] = 0
         }
-      }
-      if (data[i] === word[0]) {
-        counter[word] += 1
-      }
+      })
 
-      if (word.length === counter[word]) {
-        
-        result.push(`<span style={{ color: ${key}}}>${word}</span>`)
-      } 
-    })
+      currentWord += data[i];
+
+    } else {
+      result.push(currentWord)
+      currentWord = ''
+    }
+  }
+  
+  if (currentWord !== '') {
+    result.push(currentWord)
   }
 
-  return result.join()
+  return result.join(' ')
 }
 
 export default textFormatter;
