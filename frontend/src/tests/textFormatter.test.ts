@@ -24,7 +24,7 @@ describe('testFormatter', () => {
     expect(result).toEqual(expectedResult);
   });
 
-  it('returns colored words from rules', () => {
+  it('returns colored word from rules', () => {
 
     const data = 'new'
     const rules: [string, string][] = [['#FF0000', 'new'],];
