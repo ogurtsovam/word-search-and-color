@@ -1,7 +1,5 @@
 # Word-Search App
 
-### Tests
-
 [![Run Tests](https://github.com/ogurtsovam/word-search-and-color/actions/workflows/test.yml/badge.svg)](https://github.com/ogurtsovam/word-search-and-color/actions/workflows/test.yml)
 
 
