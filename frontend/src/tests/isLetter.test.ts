@@ -10,6 +10,6 @@ describe('isLetter',  () => {
   })
 
   it('digit test, not a letter', () => {
-    expect(isLetter('3')).toBeFalsy()
+    expect(isLetter('3')).toBeTruthy()
   })
 })

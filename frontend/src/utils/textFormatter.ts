@@ -14,12 +14,8 @@ function textFormatter(data: string, rules: [string, string][]): string {
   for (let i = 0; i < data.length; i += 1) {
     if (isLetter(data[i])) {
       rules.forEach(([key, word]) => {
-        if (data[i] === word[0]) {
+        if (data[i] === word[counter[word]]) {
           counter[word] += 1;
-        } else if (counter[word] !== 0) {
-          if (data[i] === word[counter[word]]) {
-            counter[word] += 1;
-          }
         } else {
           counter[word] = 0;
         }

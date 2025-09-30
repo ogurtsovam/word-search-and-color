@@ -14,12 +14,12 @@ describe('testFormatter', () => {
 
   it('returns colored words from rules', () => {
 
-    const data = 'new lamp'
-    const rules: [string, string][] = [['#FF0000', 'new'],];
+    const data = 'new big lamp'
+    const rules: [string, string][] = [['#FF0000', 'new'], ['#00ff04ff', 'big']];
 
     const result = testFormatter(data, rules);
 
-    const expectedResult = '<span style={{ color: #FF0000 }}>new</span> lamp'
+    const expectedResult = '<span style={{ color: #FF0000 }}>new</span> <span style={{ color: #00ff04ff }}>big</span> lamp'
 
     expect(result).toEqual(expectedResult);
   });
@@ -27,7 +27,7 @@ describe('testFormatter', () => {
   it('returns colored word from rules', () => {
 
     const data = 'new'
-    const rules: [string, string][] = [['#FF0000', 'new'],];
+    const rules: [string, string][] = [['#FF0000', 'new']];
 
     const result = testFormatter(data, rules);
 
