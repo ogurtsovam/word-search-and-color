@@ -15,8 +15,11 @@ Check out the deployed version on Render:
 [Open Word-Search App](https://word-search-and-color.onrender.com)
 
 
-### Technologies Used
-- **React**  
-- **TypeScript**  
-- **Vite**  
-- **Jest** for testing  
+### Tech Stack
+
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" alt="React"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="30" alt="Bootstrap"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="30" alt="Vite"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30" alt="TypeScript"/>
+</p>
