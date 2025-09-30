@@ -19,7 +19,19 @@ describe('testFormatter', () => {
 
     const result = testFormatter(data, rules);
 
-    const expectedResult = '<span style={{ color: #FF0000}}>new</span> lamp'
+    const expectedResult = '<span style={{ color: #FF0000 }}>new</span> lamp'
+
+    expect(result).toEqual(expectedResult);
+  });
+
+  it('returns colored words from rules', () => {
+
+    const data = 'new'
+    const rules: [string, string][] = [['#FF0000', 'new'],];
+
+    const result = testFormatter(data, rules);
+
+    const expectedResult = '<span style={{ color: #FF0000 }}>new</span>'
 
     expect(result).toEqual(expectedResult);
   });

@@ -11,8 +11,6 @@ function textFormatter(data: string, rules: [string, string][]): string {
   const result: string[] = []
   let currentWord: string = ''
 
-  // result.push(`<span style={{ color: ${key}}}>${word}</span>`)
-
   for(let i = 0; i < data.length; i += 1) {
     if (isLetter(data[i])) {
       rules.forEach(([key, word]) => {
@@ -26,13 +24,19 @@ function textFormatter(data: string, rules: [string, string][]): string {
         } else {
           counter[word] = 0
         }
+        currentWord += data[i];
+
+        if (counter[word] === word.length) {
+          result.push(`<span style={{ color: ${key} }}>${currentWord}</span>`);
+          counter[word] = 0
+          currentWord = ''
+        }
       })
-
-      currentWord += data[i];
-
     } else {
-      result.push(currentWord)
-      currentWord = ''
+      if (currentWord !== '') {
+        result.push(currentWord)
+        currentWord = ''
+      }
     }
   }
   
