@@ -1,5 +1,6 @@
 import './App.css'
 import Input from './components/Input'
+import Output from './components/Output'
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
     <>
     <div>
       <Input />
-      <textarea id="output"></textarea>
+      <Output />
     </div>    
     </>
   )
