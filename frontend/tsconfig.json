@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "types": ["jest"],
+    "types": ["jest", "react", "react-dom"],
     "target": "es2019", 
     "lib": ["es2019", "dom"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
+    "jsx": "react-jsx"
   },
   "include": ["src", "**/*.test.ts", "**/*.test.tsx"]
 }

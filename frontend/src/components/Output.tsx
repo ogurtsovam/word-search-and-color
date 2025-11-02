@@ -1,18 +1,17 @@
-import textFormatter from '../utils/textFormatter'
-import formatRules from '../utils/formatRules'
-import type {Rule} from '../library/baseLibrary'
+import textFormatter from "../utils/textFormatter";
+import formatRules from "../utils/formatRules";
+import type { Rule } from "../library/baseLibrary";
 
 function Output(data: string, rules: Rule[]) {
+  const formattedRules = formatRules(rules);
 
-  const simpleRules = formatRules(rules)
+  const result: string = textFormatter(data, formattedRules);
 
-  const result = textFormatter(data, simpleRules)
-
-  return(
+  return (
     <div>
-      {result}
+      <textarea>{result}</textarea>
     </div>
-  )
+  );
 }
 
-export default Output
+export default Output;
