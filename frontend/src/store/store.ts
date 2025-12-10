@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import activeInputReducer from "../slices/activeInputSlice"
+import activeRulesReducer from "../slices/activeRulesSlice";
 
 export const store = configureStore({
   reducer: {
     activeInput: activeInputReducer,
+    activeRules: activeRulesReducer,
   },
 });
 

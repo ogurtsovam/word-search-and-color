@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { Form, Row, Col, InputGroup } from "react-bootstrap";
 
 import { selectActiveInput, setActiveInput } from "../slices/activeInputSlice";
 
@@ -21,8 +22,10 @@ function Input() {
 
   return (
   <>
-    <textarea
-      className="form-control"
+    <h2>Input</h2>
+    <Form.Control 
+      as="textarea"
+      className="form-control mt-3 bg-light"
       rows={10}
       value={input}
       onChange={(e) => setInputHtml(e.target.value)}
