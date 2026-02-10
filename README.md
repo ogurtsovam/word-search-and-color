@@ -10,8 +10,6 @@ This application searches for specific words within the provided data and applie
 
 ###  Live Demo
 
-Check out the deployed version on Render: 
-
 [Open Word-Search App](https://word-search-and-color.onrender.com)
 
 
